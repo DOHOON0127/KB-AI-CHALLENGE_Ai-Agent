@@ -1,0 +1,61 @@
+{
+  "agent": {
+    "session_timeout_minutes": 50,
+    "max_conversation_turns": 50,
+    "max_active_sessions": 100,
+    "confidence_threshold": 0.75,
+    "max_retry_attempts": 5,
+    "retry_delay_seconds": 1,
+    "max_processing_time_seconds": 60,
+    "enable_health_check": true,
+    "health_check_interval_minutes": 5,
+    "enable_performance_monitoring": true,
+    "enable_logging": true,
+    "log_level": "INFO",
+    "mcp_tools_enabled": true,
+    "max_mcp_tools_per_query": 5,
+    "vector_db_path": "./chroma_db",
+    "collection_name": "cases",
+    "max_search_results": 10,
+    "workflow_timeout_seconds": 30,
+    "enable_workflow_caching": true,
+    "cache_ttl_seconds": 300
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file_path": "agent.log",
+    "max_file_size_mb": 10,
+    "backup_count": 5,
+    "enable_console": true,
+    "enable_file": true
+  },
+  "performance": {
+    "enable_metrics": true,
+    "metrics_interval_seconds": 60,
+    "enable_profiling": false,
+    "max_metrics_history": 1000,
+    "alert_thresholds": {
+      "response_time_seconds": 5.0,
+      "error_rate_percent": 5.0,
+      "memory_usage_percent": 80.0,
+      "cpu_usage_percent": 80.0
+    }
+  },
+  "security": {
+    "enable_rate_limiting": true,
+    "max_requests_per_minute": 60,
+    "enable_input_validation": true,
+    "max_query_length": 1000,
+    "blocked_keywords": [
+      "password",
+      "secret",
+      "private",
+      "confidential",
+      "admin",
+      "root",
+      "system",
+      "internal"
+    ]
+  }
+}

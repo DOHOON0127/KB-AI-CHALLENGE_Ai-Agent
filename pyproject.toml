@@ -1,0 +1,39 @@
+[project]
+name = "kb-ai-challenge-ai-agent"
+version = "0.1.0"
+description = "금융 소비자 권익 보호 AI 에이전트"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "sentence-transformers>=2.0.0",
+    "chromadb>=0.4.0",
+    "langgraph>=0.6.0",
+    "langchain>=0.3.0",
+    "langchain-google-genai>=2.0.0",
+    "google-generativeai>=0.8.0",
+    "streamlit>=1.48.0",
+    "plotly>=5.0.0",
+    "pandas>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "flake8>=7.0.0",
+    "mypy>=1.0.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py313']
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
