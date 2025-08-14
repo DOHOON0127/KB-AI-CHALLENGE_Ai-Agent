@@ -12,7 +12,7 @@ class State(TypedDict, total=False):
     query: str
     docs: List[Dict[str, Any]]
     action: str               # "correct" | "incorrect" | "ambiguous"
-    scores: List[float]
+    scores: List[float] 
     internal_text: str
     external_text: str
     citations: List[Dict[str,str]]
