@@ -4,7 +4,7 @@ from langchain_core.messages import HumanMessage
 from tools import local_retrieve, evaluate_retrieval, refine_internal_knowledge, web_search_and_scrape, generate_structured_answer
 import logging
 
-# 로깅 설정
+# 로깅 설정 완료
 logger = logging.getLogger(__name__)
 
 class State(TypedDict, total=False):
